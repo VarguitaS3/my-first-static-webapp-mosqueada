@@ -1,0 +1,48 @@
+{
+  "id": "did:web:tangoindia.club",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:tangoindia.club"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://tangoindia.club/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/4028c750-d3fd-46d7-b3f9-248fba8afd94"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#da2e1d854f40458793f4564b4e518d3avcSigningKey-1adac",
+      "controller": "did:web:tangoindia.club",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "Oh4kDeCq6ndwjPCvjm9sJgdH3s_tUUezsc73LVQijUQ",
+        "y": "go90Ap1M3PlTx_bQ9q9qLghsgOtNve6Cp0F7rLiX028"
+      }
+    }
+  ],
+  "authentication": [
+    "#da2e1d854f40458793f4564b4e518d3avcSigningKey-1adac"
+  ],
+  "assertionMethod": [
+    "#da2e1d854f40458793f4564b4e518d3avcSigningKey-1adac"
+  ]
+}
